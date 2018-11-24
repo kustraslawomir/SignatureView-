@@ -2,7 +2,6 @@ package slawomir.kustra.signaturegroup
 
 import android.content.Context
 import android.util.AttributeSet
-import android.util.Log
 import android.view.Gravity
 import android.widget.FrameLayout
 import android.widget.ImageView
@@ -29,7 +28,6 @@ class SignatureView(context: Context, attrs: AttributeSet) : FrameLayout(context
 
     private fun setEraserClickListener() {
         eraserView.setOnClickListener {
-            Log.e("click", "click")
             signatureView.clearSignature()
         }
     }
