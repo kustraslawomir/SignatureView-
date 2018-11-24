@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color.BLACK
+import android.graphics.Color.WHITE
 import android.graphics.Paint
 import android.graphics.Path
 import android.util.AttributeSet
@@ -17,6 +18,11 @@ internal class SignatureDrawView(context: Context, attrs: AttributeSet) : View(c
 
     init {
         setDefaultPaintStyle(paint)
+    }
+
+    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+        setBackgroundColor(WHITE)
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec)
     }
 
     private fun setDefaultPaintStyle(paint: Paint) {

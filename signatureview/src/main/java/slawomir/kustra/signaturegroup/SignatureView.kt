@@ -7,6 +7,7 @@ import android.widget.FrameLayout
 import android.widget.ImageView
 import slawomir.kustra.signatureview.SignatureDrawView
 import slawomir.kustra.signatureview.R
+import slawomir.kustra.utils.Utils
 
 class SignatureView(context: Context, attrs: AttributeSet) : FrameLayout(context, attrs) {
 
@@ -27,7 +28,7 @@ class SignatureView(context: Context, attrs: AttributeSet) : FrameLayout(context
         val eraser = ImageView(context)
         eraser.setImageResource(R.drawable.ic_eraser)
         val params = FrameLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT)
-        params.setMargins(0, 20, 20, 0)
+        params.setMargins(0, Utils.pxFromDp(context, 20f).toInt(), Utils.pxFromDp(context, 20f).toInt(), 0)
         params.gravity = Gravity.END
         eraser.layoutParams = params
         eraser.scaleType = ImageView.ScaleType.CENTER
