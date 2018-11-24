@@ -2,11 +2,9 @@ package slawomir.kustra.signatureview
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.graphics.Canvas
+import android.graphics.*
 import android.graphics.Color.BLACK
 import android.graphics.Color.WHITE
-import android.graphics.Paint
-import android.graphics.Path
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
@@ -51,5 +49,10 @@ internal class SignatureDrawView(context: Context, attrs: AttributeSet) : View(c
 
         invalidate()
         return true
+    }
+
+    fun clearSignature() {
+        path.reset()
+        invalidate()
     }
 }
