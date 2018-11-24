@@ -10,7 +10,7 @@ import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
 
-class SignatureView(context: Context, attrs: AttributeSet) : View(context, attrs) {
+internal class SignatureDrawView(context: Context, attrs: AttributeSet) : View(context, attrs) {
 
     private val paint = Paint()
     private val path = Path()
